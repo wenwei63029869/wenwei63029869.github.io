@@ -1,10 +1,13 @@
 html{
   background-color: #4A738C;
+  height: 100%;
+  margin: auto;
+  padding: 0;
 }
 
 #s0{
   width: 100%;
-  height:157px;
+  height:160px;
   background-color: #6C808C;
   position: absolute;
   float: left;
@@ -30,9 +33,9 @@ h1{
 
 #blog-title {
   position: absolute;
-  top: 40px;
+  top: 90px;
   left: 180px;
-  font-size: 100px;
+  font-size: 60px;
   margin: auto;
   color: #2E4159;
 }
@@ -55,10 +58,12 @@ h2{
   width: 1253px;
 }
 
-#blog {
+.blog {
   position: absolute;
-  top: 200px;
+  top: 180px;
   background-color: #4A738C;
+  margin: auto;
+  padding-bottom: 100px;
 }
 
 .blogbody{
@@ -69,6 +74,11 @@ h2{
   margin-bottom: 30px;
   float: left;
   line-height: 1.5;
+  left: 20px;
+}
+
+.blogbody span{
+  font-style: bold;
 }
 
 p{
@@ -81,7 +91,7 @@ p{
   color: #2F4359;
 }
 
-span{
+#s2 span{
   font-style: italic;
 }
 
@@ -100,9 +110,11 @@ span{
   top: 670px;
   left: 10px;
   margin-right: 17px;
+  margin-bottom: 90px;
   border: 2px solid #2F4359;
   height: 200px;
   width: 1253px;
+  padding-bottom: 150px;
 }
 
 h2{
@@ -126,14 +138,14 @@ h3{
   }
 
 footer{
-  position:absolute;
+  position: fixed;
   background-color: #6C808C;
   width: 100%;
   height: 70px;
-  top: 900px;
   left: 0px;
   right: 0px;
   bottom: 0px;
+  clear: both;
   }
 
 a:visted{
