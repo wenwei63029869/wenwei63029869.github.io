@@ -58,9 +58,9 @@ h2{
   width: 1253px;
 }
 
-.blog {
+#blog {
   position: absolute;
-  top: 180px;
+  top: 200px;
   background-color: #4A738C;
   margin: auto;
   padding-bottom: 100px;
