@@ -148,10 +148,8 @@ h3{
   position: absolute;
   right: 150px;
   bottom: -95px;
-  display: block-inline;
   width: 120px;
   height: 30px;
-  border: 2px solid #2F4359;
   margin-bottom: 110px;
   margin-left:auto;
   margin-right:auto;
@@ -161,22 +159,15 @@ h3{
   text-decoration: none;
 }
 
-#blog_index_navigation_bar_1{
-  position: absolute;
-  display: block-inline;
-  right: 150px;
-  bottom: -95px;
-  width: 120px;
-  height: 30px;
-  border: 2px solid #2F4359;
-  margin-bottom: 110px;
-  text-align: center;
-  color: #2F4359;
-  font-size: 1.5em;
-  text-decoration: none;
+#navigation_bar:hover{
+  color:aliceblue;
 }
 
-#blog_index_navigation_bar_2{
+#blog_index_navigation_bar_1:hover{
+  color:aliceblue;
+}
+
+#blog_index_navigation_bar_1{
   position: absolute;
   display: block-inline;
   right: 300px;
