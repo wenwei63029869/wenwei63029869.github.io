@@ -77,8 +77,12 @@ h2{
   left: 20px;
 }
 
-#t3_img{
+.t3_img{
   position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+  float: left;
   bottom: 10px;
   left: 20px;
   padding-bottom: 10px;
@@ -217,4 +221,5 @@ footer p{
   position: relative;
   top: 6px;
 }
+
 
