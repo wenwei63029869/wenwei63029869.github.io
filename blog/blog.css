@@ -77,6 +77,21 @@ h2{
   left: 20px;
 }
 
+#c3_list{
+  display: block;
+  position: relative;
+  bottom: 25px;
+  font-size: 20px;
+  color: #2E4159;
+}
+
+#c3_list_title{
+  font-size:27px;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+
 .blogbody span{
   font-style: bold;
 }
