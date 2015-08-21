@@ -206,6 +206,20 @@ footer{
   clear: both;
   }
 
+#c4_tech_issues{
+  font-size:25px;
+  width: 96%;
+  margin:auto;
+  margin-bottom: 30px;
+  float: left;
+  line-height: 1.5;
+  left: 20px;
+}
+
+#c4_tech_issues{
+  padding-left: 10px;
+}
+
 a{
   text-decoration: none;
 }
