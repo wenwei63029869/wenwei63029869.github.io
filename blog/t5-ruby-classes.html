@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+
+<head>
+  <title>It Is All About Classes</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="blog.css">
+</head>
+
+<main>
+  <section id="s0">
+    <img src="SmartConnect.png"/>
+    <h3 id="blog-title">It Is All About Classes</h3>
+  </section>
+  <section id="blog">
+    <p class="blogbody">
+        Class is probably one the most important concepts in Ruby or even all programming languages. For beginers, they use different existing methods to do different magic tricks. However, until we learn class, we will able to create our own magic tricks. In this blog, we are going to talking about what class is and how we use it.
+    </p>
+    <p class="blogbody">
+        An object-oriented program involves classes and objects. Individual objects are creasted from a class. In other words, we can think of a class as a factory. The product -- objects get produced from a class and stored there. For example, in object-oriented terms, we say that your cheese_cakes is an instance of the class of objects known as cakes. An example of class creation is shown below.
+    </p>
+    <pre><code>
+    class Cake
+      def initialize(size, flavor)  #=> Constructor function
+        @size = size  #=> Instance variable
+        @flavor = flavor
+      end
+
+      def size  #=> reader function
+        @size
+      end
+
+      def flavor  #=> reader function
+        @flavor
+      end
+    end
+
+    cheese_cake = Cake.new(10, "cheese")  #=> A new class instance is created
+    cheese_cake.size  #=> return 10
+    cheese_cake.flavor  #=> return "cheese"
+    </code></pre>
+    <p class="blogbody">
+         As you can see, when we create a new class, we usually create a constructor function "initialize." That's because you might want to perform some set-up code when a new instance is created. In the example, the initialize method sets up two instance variables - @size and @flavor(an instance variable usually starts with "@") and assign the parameters to them. Then two reader function is added. Therefore, when they are called on the instance, the values of instance variables will be returned accordingly. However, the codes below seem to be redundant.
+    </p>
+    <pre><code>
+    def size
+        @size
+    end
+
+    def flavor
+      @flavor
+    end
+    </code></pre>
+    <p class="blogbody">
+         We can actually simplify this into a one-line code by replacing them with attrbute method as shown below. The result will be same.
+    </p>
+    <pre><code>
+    attr_reader :size, :flaver
+
+    cheese_cake.size  #=> return 10
+    cheese_cake.flavor  #=> return "cheese"
+    </code></pre>
+    <p class="blogbody">
+         More than often, being able to call out the instance variable value is not enough. We sometimes need to be able to change the instance variable value too. Therefore, we need a writer method.
+    </p>
+    <pre><code>
+    attr_writer :size, :flaver
+
+    cheese_cake.size = 12  #=> now @size = 12
+    cheese_cake.flavor = "blueberry"  #=> now @flavor = "blueberry"
+    </code></pre>
+    <p class="blogbody">
+         If we want both reader and writer to be callable on the instance variables. We can do this:
+    </p>
+    <pre><code>
+    attr_accessor :size, :flaver
+
+    cheese_cake.size  #=> return 10
+    cheese_cake.flavor  #=> return "cheese"
+    cheese_cake.size = 12  #=> now @size = 12
+    cheese_cake.flavor = "blueberry"  #=> now @flavor = "blueberry"
+    </code></pre>
+    <p class="blogbody">
+         Now let's get into the real interesting part. If we can only set up a new instance, read and write values, that's not very usually. We can actually create instance methods to do something with the instance. As a matter of fact, size and flavor are instant methods. Now let's take a look at another example.
+    </p>
+    <pre><code>
+    def upgrade
+      @size = @size + 2
+    end
+
+    cheese_cake.upgrde.size  #=> return 12
+    </code></pre>
+    <p class="blogbody">
+         When we call the instance method "upgrade," the size will increase by two and the new value will be stored to the instance variable @size. Therefore, when the size method is called, it is 12 that is returned. Maybe you would ask why I use @size instead size in upgrade method. The reason is that size is a local variable for initialize, which means it can only be recognized whitin initialize function. @size is an instance variable, which means that it can recognized anywhere within the class.
+    </p>
+    <p class="blogbody">
+         This a very breif introduction on class. If you have any further questions on this blog, please feel free to contact me.
+    </p>
+  </section>
+  <footer>
+    <p>Updated by: Wei Wen</p>
+    <p>Updated in: August ,28 2015</p>
+    <p>Contact information: <a href="wwen1030@gmail.com">
+      wwen1030@gmail.com</a>.</p>
+    <a href="http://wenwei63029869.github.io" id = "navigation_bar">Home Page</a>
+    <a href="http://wenwei63029869.github.io/blog/blog.html" id = "blog_index_navigation_bar_1">Blog Index</a>
+  </footer>
+
+</main>
+
