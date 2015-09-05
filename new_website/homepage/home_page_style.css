@@ -1,0 +1,114 @@
+html {
+  background: url(homepage_background.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#title{
+  position: relative;
+  top: 20px;
+  color: White;
+  font-size: 150px;
+  font-family: cursive;
+}
+
+#subtitle{
+  position: relative;
+  left: 30px;
+  bottom: 20px;
+  color: White;
+  font-size: 25px;
+  font-family: cursive;
+  line-height: 25px;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+#Profile_pic{
+  position: absolute;
+  top: 60px;
+  right: 210px;
+}
+
+#Profile_pic img{
+  width: 350px;
+}
+
+#Nevigation_bar{
+  position: fixed;
+  bottom:5px;
+  width: 100%;
+  height: 44px;
+  text-align: center;
+  clear: both;
+}
+
+#Nevigation{
+  margin: auto;
+  margin-left: 2px;
+  padding-left: 0px;
+}
+
+.Nevigation{
+  width: 24%;
+  display: block;
+  float: left;
+  line-height: 33px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 2px solid black;
+  background:rgba(255,255,255,0.4);
+}
+
+#social_media_bar{
+  position: fixed;
+  right: 10px;
+  top: 26%;
+  border-radius: 25px;
+  background:rgba(255,255,255,0.4);
+  display: block;
+  height: 47%;
+}
+
+#social_media{
+  list-style-type: none;
+  margin: auto;
+  padding: auto;
+  padding-left: 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.social_media{
+  #background:rgba(255,255,255,0);
+  line-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.social_media img{
+  width: 40px;
+  height: 40px;
+}
+
+a{
+  position: relative;
+  top: 5px;
+}
+
+.Nevigation img{
+  width: 30px;
+  height: 30px;
+}
+
+#back{
+  height:1000px;
+}
