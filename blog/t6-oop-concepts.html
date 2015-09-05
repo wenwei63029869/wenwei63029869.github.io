@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+
+<head>
+  <title>Classes vs Modules</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="blog.css">
+</head>
+
+<main>
+  <section id="s0">
+    <img src="SmartConnect.png"/>
+    <h3 id="blog-title">Classes vs Modules</h3>
+  </section>
+  <section id="blog">
+    <p class="blogbody">
+        When we first learn ruby, we hear classes very often. However, what we don't know is that classes have a brother called modules. They are very similar but very different at the same time. In this article, we will discuss about the similarities and differences between them.
+    </p>
+    <p class="blogbody">
+        Let's first start from the simple one - modules. Here are some key points about modules.
+    </p>
+    <p class="blogbody">
+        <ol>
+          <li>A Ruby file with some functions or variables in it inside a module .. end block.</li>
+          <li>You import that file.</li>
+          <li>And you can access the functions or variables in that module with the . (dot) operator.</li>
+        </ol>
+    </p>
+    <p class="blogbody">
+          Now imagine I have a module called "mything.rb" and I put a function in it called "list." Besides, I can call put a variable in it too.
+    </p>
+    <pre><code>
+          # this goes in mything.rb
+          module MyThing
+            def MyThing.list()
+                puts "You have nothing here!"
+            end
+            TANGERINE = "You have to put something in it"
+          end
+    </code></pre>
+    <p class="blogbody">
+         Once I have the code set up, I import the file and call the function and variable as shown below.
+    </p>
+    <pre><code>
+          require "./mything.rb"
+          MyThing.list()
+          puts MyThing::TANGERINE
+    </code></pre>
+    <p class="blogbody">
+          After we are clear what modules are, let's move on to classes. The official explanation for classes is that a class is the blueprint from which individual objects are created. However, there is a simplier explanation: a class is a way to take a grouping of functions and data and place them inside a container so you can access them with the "." operator. Therefore, it serves a similiar purpose as a module. From the example below, you will able to see the similaity.
+    </p>
+    <pre><code>
+          class MyThing
+
+            def initialize()
+                @tangerine = "You have to put something in it"
+            end
+
+            attr_reader :tangerine
+
+            def list()
+                puts "You have nothing here!"
+            end
+
+          end
+    </code></pre>
+    <p class="blogbody">
+          Then, instead of requiring a file like for modules, you need to instantiate an object. With that object, you will be able to use everything inside of the class that it belongs to.
+    </p>
+    <pre><code>
+          thing = MyThing.new()
+          thing.list()
+          puts thing.tangerine
+    </code></pre>
+    <p class="blogbody">
+          The output will be identical. However, most programmers would choose using classes over modules. The reason is scalability. You can use take a class and make many of them, and they won't interfere with each other. However, when you import a module, you can only run one for the entire program, which means it is way less flexible.
+    </p>
+    <p class="blogbody">
+          Great! Now that you know what classes and modules are, you should know when to use which next time.
+    </p>
+  </section>
+  <footer>
+    <p>Updated by: Wei Wen</p>
+    <p>Updated in: September ,4 2015</p>
+    <p>Contact information: <a href="wwen1030@gmail.com">
+      wwen1030@gmail.com</a>.</p>
+    <a href="http://wenwei63029869.github.io" id = "navigation_bar">Home Page</a>
+    <a href="http://wenwei63029869.github.io/blog/blog.html" id = "blog_index_navigation_bar_1">Blog Index</a>
+  </footer>
+
+</main>
+
