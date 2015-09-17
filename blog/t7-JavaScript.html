@@ -43,16 +43,14 @@
         Similarly, in Javascript, constructor function is a blue print to create objects. Therefore, the new object will inherit everything from its constructor function. In the example shown below, you will see how to set up a constructor function and create new objects from it.
     </p>
     <pre><code>
-        function Goldbag(posX, posY, gold) {
+        function Goldbag(posX, posY) {
           this.posX = posX;
           this.posY = posY;
-          this.gold = gold;
         }
 
-        var goldBag1 = new Goldbag(Math.floor(Math.random()*50 + 1), Math.floor(Math.random()*50 + 1), Math.floor(Math.random()*100 + 1))
-        // var goldBag1 = new Goldbag(10, 10, 100)
-        var goldBag2 = new Goldbag(Math.floor(Math.random()*50 + 1), Math.floor(Math.random()*50 + 1), Math.floor(Math.random()*100 + 1))
-        var goldBag3 = new Goldbag(Math.floor(Math.random()*50 + 1), Math.floor(Math.random()*50 + 1), Math.floor(Math.random()*100 + 1))
+        var goldBag1 = new Goldbag(Math.random()*50 + 1, Math.random()*50 + 1)
+        var goldBag2 = new Goldbag(Math.random()*50 + 1, Math.random()*50 + 1)
+        var goldBag3 = new Goldbag(Math.random()*50 + 1, Math.random()*50 + 1)
     </code></pre>
     <p class="blogbody">
          If you pay attention, you should see that the constructor function is very similar to initialize function in class which happens to be called constructor function as well. Therefore constructor functiion in Javascript only does part of what a class does in Ruby. If you ever want to add function to all the same type of objects (like instance method in Ruby), you will need to prototype. Here is an article about prototype in Javascript: <a href="https://github.com/raganwald/javascript-allonge/blob/master/manuscript/markdown/Ideas/prototype.md">How Prototypes and Constructors differ from Classes</a>. Another difference is that a class is actually an instance of another class while a constructor function is not. Therefore, a class will have methods inherited from its super class, while constructor function doesn't have any super class to inherit methods from.
