@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Cheat Sheet</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="cheat_sheet.css">
+</head>
+<body>
+
+
+
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>CheatSheet <small>Loops in Ruby & JavaScript</small></h1>
+      <hr/>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="large-9 columns" role="content">
+
+      <article>
+
+        <h3><a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm">Ruby Loops</a></h3>
+        <h6>By <a href="http://www.tutorialspoint.com">tutorialspoint.com</a> on September 16, 2016.</h6>
+
+        <p>Loops in Ruby are used to execute the same block of code a specified number of times. This chapter details all the loop statements supported by Ruby.</p>
+
+        <p>Ruby <larger>While</larger> Statement:</p>
+
+        <pre><code>
+          while conditional [do]
+            code
+          end
+        </code></pre>
+
+        <p>Executes code while conditional is true. A while loop's conditional is separated from code by the reserved word do, a newline, backslash \, or a semicolon ;.</p>
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          i = 5
+          num = 0
+
+          while i > num  do
+             puts "Inside the loop i = #{i}"
+             i -= 1
+          end
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          Inside the loop i = 5
+          Inside the loop i = 4
+          Inside the loop i = 3
+          Inside the loop i = 2
+          Inside the loop i = 1
+        </code></pre>
+
+        <p>Ruby <larger>While</larger> modifier</p>
+
+        <p><larger>Syntax</larger></p>
+
+        <pre><code>
+          code while condition
+
+          OR
+
+          begin
+            code
+          end while conditional
+        </code></pre>
+
+        <p>Ruby <larger>For</larger> statement:</p>
+
+        <pre><code>
+          for variable [, variable ...] in expression [do]
+             code
+          end
+        </code></pre>
+
+        <p>Executes code once for each element in expression.</p>
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          for i in 0..5
+             puts "Value of local variable is #{i}"
+          end
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          Inside the loop i = 0
+          Inside the loop i = 1
+          Inside the loop i = 2
+          Inside the loop i = 3
+          Inside the loop i = 4
+          Inside the loop i = 5
+        </code></pre>
+
+        <p>A for...in loop is almost exactly equivalent to:</p>
+
+        <pre><code>
+          (expression).each do |variable[, variable...]|
+            code
+          end
+        </code></pre>
+
+        <p>except that a for loop doesn't create a new scope for local variables. A for loop's expression is separated from code by the reserved word do, a newline, or a semicolon.</p>
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          (0..5).each do |i|
+             puts "Value of local variable is #{i}"
+          end
+        </code></pre>
+
+         <p>This will produce the following result:</p>
+
+        <pre><code>
+          Value of local variable is 0
+          Value of local variable is 1
+          Value of local variable is 2
+          Value of local variable is 3
+          Value of local variable is 4
+          Value of local variable is 5
+        </code></pre>
+
+        <p>Ruby <larger>Break</larger> statement:</p>
+
+        <pre><code>
+          break
+        </code></pre>
+
+        <p>Terminates the most internal loop. Terminates a method with an associated block if called within the block (with the method returning nil).</p>
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          for i in 0..5
+             if i > 2 then
+                break
+             end
+             puts "Value of local variable is #{i}"
+          end
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          Value of local variable is 0
+          Value of local variable is 1
+          Value of local variable is 2
+        </code></pre>
+
+        <p>Ruby <larger>Next</larger> statement:</p>
+
+        <pre><code>
+          Next
+        </code></pre>
+
+        <p>Jumps to next iteration of the most internal loop. Terminates execution of a block if called within a block (with yield or call returning nil).</p>
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          for i in 0..5
+             if i < 2 then
+                next
+             end
+             puts "Value of local variable is #{i}"
+          end
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          Value of local variable is 2
+          Value of local variable is 3
+          Value of local variable is 4
+          Value of local variable is 5
+        </code></pre>
+
+        <p>Ruby <larger>Redo</larger> statement:</p>
+
+        <pre><code>
+          redo
+        </code></pre>
+
+        <p>Restarts this iteration of the most internal loop, without checking loop condition. Restarts yield or call if called within a block.</p>
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          for i in 0..5
+             if i < 2 then
+                puts "Value of local variable is #{i}"
+                redo
+             end
+          end
+        </code></pre>
+
+        <p>This will produce the following result and will go in an infinite loop:</p>
+
+        <pre><code>
+          Value of local variable is 0
+          Value of local variable is 0
+          ............................
+        </code></pre>
+
+        <p>Ruby <larger>Retry</larger> statement:</p>
+
+        <pre><code>
+          retry
+        </code></pre>
+
+        <p>If retry appears in rescue clause of begin expression, restart from the beginning of the 1begin body.</p>
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          begin
+             do_something # exception raised
+          rescue
+             # handles error
+             retry  # restart from beginning
+          end
+        </code></pre>
+
+        <p>If retry appears in the iterator, the block, or the body of the for expression, restarts the invocation of the iterator call. Arguments to the iterator is re-evaluated.</p>
+
+        <pre><code>
+          for i in 1..5
+             retry if some_condition # restart from i == 1
+          end
+        </code></pre>
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          for i in 1..5
+             retry if  i > 2
+             puts "Value of local variable is #{i}"
+          end
+        </code></pre>
+
+        <p>This will produce the following result and will go in an infinite loop:</p>
+
+        <pre><code>
+          Value of local variable is 1
+          Value of local variable is 2
+          Value of local variable is 1
+          Value of local variable is 2
+          Value of local variable is 1
+          Value of local variable is 2
+          ............................
+        </code></pre>
+
+      </article>
+
+      <hr/>
+
+      <article>
+
+        <h3><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">JavaScript Loops</a></h3>
+        <h6>By <a href="https://developer.mozilla.org">MDN</a> on September 17, 2016.</h6>
+
+        <p>JavaScript <larger>For</larger> statement:</p>
+
+        <pre><code>
+          for ([initialExpression]; [condition]; [incrementExpression]) {
+            statement;
+        }
+        </code></pre>
+
+        <p>A for loop repeats until a specified condition evaluates to false. The JavaScript for loop is similar to the Java and C for loop. </p>
+
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          var a = [1,2,3,4,5]
+          for (var i = 0; i < a.length; i++) {
+            a[i] + 1;
+          }
+          console.log(a);
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          [2,3,4,5,6]
+        </code></pre>
+
+        <p>JavaScript <larger>Do...While</larger> statement:</p>
+
+        <pre><code>
+          do {
+            statement;
+          } while (condition);
+        </code></pre>
+
+        <p>statement executes once before the condition is checked. To execute multiple statements, use a block statement ({ ... }) to group those statements. If condition is true, the statement executes again. At the end of every execution, the condition is checked. When the condition is false, execution stops and control passes to the statement following do...while</p>
+
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          var i = 0;
+          do {
+            i += 1;
+            console.log(i);
+          } while (i < 5);
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          1
+          2
+          3
+          4
+          5
+        </code></pre>
+
+        <p>JavaScript <larger>While</larger> statement:</p>
+
+        <pre><code>
+          while (condition) {
+            statement;
+          };
+        </code></pre>
+
+        <p>A while statement executes its statements as long as a specified condition evaluates to true. </p>
+
+
+        <p><larger>Example 1:</larger></p>
+
+        <pre><code>
+          var n = 0;
+          var x = 0;
+          while (n < 3) {
+            n++;
+            console.log(n);
+            x += n;
+            console.log(x);
+          }
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          1
+          1
+          2
+          3
+          3
+          6
+        </code></pre>
+
+        <p><larger>Example 2:</larger></p>
+
+        <pre><code>
+          while (true) {
+            console.log("Hello, world");
+          }
+        </code></pre>
+
+        <p>This will produce the following result and go in a infinite loop because while statement will never be false:</p>
+
+        <pre><code>
+          "Hello, world"
+          "Hello, world"
+          "Hello, world"
+          .....
+        </code></pre>
+
+        <p>JavaScript <larger>Label</larger> statement:</p>
+
+        <pre><code>
+          markLoop:
+          loop statement {
+             doSomething();
+          }
+        </code></pre>
+
+        <p>A label provides a statement with an identifier that lets you refer to it elsewhere in your program. For example, you can use a label to identify a loop, and then use the break or continue statements to indicate whether a program should interrupt the loop or continue its execution.</p>
+
+
+        <p><larger>Example 1:</larger></p>
+
+        <pre><code>
+          var i, j;
+
+          loop1:
+          for (i = 0; i < 3; i++) {
+             loop2:
+             for (j = 0; j < 3; j++) {
+                if (i == 1 && j == 1) {
+                   continue loop1;
+                }
+                console.log("i = " + i + ", j = " + j);
+             }
+          }
+        </code></pre>
+
+        <p>This will produce the following result and notice how it skips both "i = 1, j = 1" and "i = 1, j = 2":</p>
+
+        <pre><code>
+          i = 0, j = 0
+          i = 0, j = 1
+          i = 0, j = 2
+          i = 1, j = 0
+          i = 2, j = 0
+          i = 2, j = 1
+          i = 2, j = 2
+        </code></pre>
+
+        <p>JavaScript <larger>Break</larger> statement:</p>
+
+        <pre><code>
+          1. break;
+
+          2. break label;
+        </code></pre>
+
+        <p>Use the break statement to terminate a loop, switch, or in conjunction with a label statement. The first form of the syntax terminates the innermost enclosing loop or switch; the second form of the syntax terminates the specified enclosing label statement.</p>
+
+
+        <p><larger>Example 1:</larger></p>
+
+        <pre><code>
+          var i;
+          var a = [1, 5, 2, 6, 10, 11, 16]
+          var theValue = 10
+
+          for (i = 0; i < a.length; i++) {
+            if (a[i] == theValue) {
+              break;
+            }
+            console.log(a[i])
+          }
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          1
+          5
+          2
+          6
+        </code></pre>
+
+        <p><larger>Example 2:</larger></p>
+
+        <pre><code>
+          var x = 0;
+          var z = 0
+          labelCancelLoops: while (true) {
+            console.log("Outer loops: " + x);
+            x += 1;
+            z = 1;
+            while (true) {
+              console.log("Inner loops: " + z);
+              z += 1;
+              if (z === 10 && x === 10) {
+                break labelCancelLoops;
+              } else if (z === 10) {
+                break;
+              }
+            }
+          }
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          Outer loops: 0
+          Inner loops: 1
+          Inner loops: 2
+          Outer loops: 1
+          Inner loops: 1
+          Inner loops: 2
+          Outer loops: 2
+          Inner loops: 1
+          Inner loops: 2
+        </code></pre>
+
+        <p>JavaScript <larger>Continue</larger> statement:</p>
+
+        <pre><code>
+          1. Continue;
+
+          2. Continue label;
+        </code></pre>
+
+        <p>The continue statement can be used to restart a while, do-while, for, or label statement. When you use continue without a label, it terminates the current iteration of the innermost enclosing while, do-while, or for statement and continues execution of the loop with the next iteration. In contrast to the break statement, continue does not terminate the execution of the loop entirely. In a while loop, it jumps back to the condition. In a for loop, it jumps to the increment-expression. When you use continue with a label, it applies to the looping statement identified with that label.</p>
+
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          i = 0;
+          n = 0;
+          while (i < 5) {
+            i++;
+            if (i == 3) {
+              continue;
+            }
+            console.log(n += i);
+          }
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          1
+          3
+          7
+          12
+        </code></pre>
+
+        <p>JavaScript <larger>For/in</larger> statement:</p>
+
+        <pre><code>
+          for (variable in object) {
+            statements
+          }
+        </code></pre>
+
+        <p>The for...in statement iterates a specified variable over all the enumerable properties of an object. For each distinct property, JavaScript executes the specified statements.</p>
+
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          var a = [1,2,3,4,5]
+
+          for (var i in a) {
+            console.log(a[i]+1);
+          }
+        </code></pre>
+
+        <p>This will produce the following result:</p>
+
+        <pre><code>
+          2
+          3
+          4
+          5
+          6
+        </code></pre>
+
+        <p>JavaScript <larger>For/of</larger> statement:</p>
+
+        <pre><code>
+          for (variable of object) {
+            statements
+          }
+        </code></pre>
+
+        <p>The for...of statement creates a loop Iterating over iterable objects (including Array, Map, Set, arguments object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property.</p>
+
+
+        <p><larger>Example:</larger></p>
+
+        <pre><code>
+          let arr = [3, 5, 7];
+          arr.foo = "hello";
+
+          for (let i in arr) {
+             console.log(i); // logs "0", "1", "2", "foo"
+          }
+
+          for (let i of arr) {
+             console.log(i); // logs "3", "5", "7"
+          }
+        </code></pre>
+
+        <p>The example above shows the difference between a for...of loop and a for...in loop. While for...in iterates over property names, for...of iterates over property values。</p>
+
+      </article>
+
+    </div>
+
+
+
+    <aside class="large-3 columns">
+
+      <h5>Cheat Sheet List</h5>
+      <ul class="side-nav">
+        <li><a href="#">Ruby BASICS</a></li>
+        <li><a href="#">Ruby Enumerables</a></li>
+        <li><a href="#">Ruby Hashes, Arrays, Strings, Integers</a></li>
+        <li><a href="#">JavaScript Objects</a></li>
+        <li><a href="#">JavaScript prototypes</a></li>
+        <li><a href="#">More...</a></li>
+      </ul>
+
+      <div class="panel">
+        <h5>Newest cheat sheet</h5>
+        <p>Coming soon...</p>
+        <a href="#">Read More →</a>
+      </div>
+
+    </aside>
+
+
+  </div>
+
+
+
+
+
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright no one at all. Good Good Study, Day Day Up!</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
