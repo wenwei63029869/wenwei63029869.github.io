@@ -101,6 +101,19 @@ pre {
   left: 20px;
 }
 
+#blog ul{
+  font-size:25px;
+  color: #2E4159;
+  width: 96%;
+  margin:auto;
+  padding-left: 50px;
+  margin-top: -20px;
+  margin-bottom: 40px;
+  float: left;
+  line-height: 1.5;
+  left: 20px;
+}
+
 #c3_list{
   display: block;
   position: relative;

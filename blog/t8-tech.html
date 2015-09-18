@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Regular Expression</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="blog.css">
+</head>
+
+<main>
+  <section id="s0">
+    <img src="SmartConnect.png"/>
+    <h3 id="blog-title">Regular Expression</h3>
+  </section>
+  <section id="blog">
+    <p class="blogbody">
+        In theoretical computer science and formal language theory, a regular expression (abbreviated regex or regexp and sometimes called a rational expression) is a sequence of characters that define a search pattern, mainly for use in pattern matching with strings, or string matching, i.e. "find and replace"-like operations. Many programming languages provide regular expression capabilities, some built-in, for example Perl, JavaScript, Ruby, AWK, and Tcl, and others via a standard library, for example .NET languages, Java, Python and C++ (since C++11). Most other languages offer regular expressions via a library. The list below contains the most common regular expression sympols:
+    </p>
+    <ul>
+      <li>. - Matches any character, except for line breaks if dotall is false.</li>
+      <li>* - Matches 0 or more of the preceding character.</li>
+      <li>+ - Matches 1 or more of the preceding character.</li>
+      <li>\d - Matches any single digit</li>
+      <li>? - Preceding character is optional. Matches 0 or 1 occurrence.</li>
+      <li>\w - Matches any word character (alphanumeric & underscore).</li>
+      <li>[XYZ] - Matches any single character from the character class.</li>
+      <li>[XYZ]+ - Matches one or more of any of the characters in the set.
+</li>
+      <li>$ - Matches the end of the string.</li>
+      <li>^ - Matches the beginning of a string.</li>
+      <li>[^a-z] - When inside of a character class, the ^ means NOT; in this case, match anything that is NOT a lowercase letter.</li>
+    </ul>
+    <p class="blogbody">
+        I think the best way to learn how to use regular expression is to read as many examples as possible. Therefore, next I will show couple of examples and explain what they means.
+    </p>
+    <pre><code>
+        var username = 'JohnSmith';
+        /[A-Za-z_-]+/.test(username); // returns true
+    </code></pre>
+    <p class="blogbody">
+        Here, the regualar expression is checking for letters uppercase [A-Z], lowercase [a-z], an underscore [_], and a dash [-]. Since variable "username" contains the right expression, it passes the test and return ture.
+    </p>
+    <pre><code>
+        var str = 'this is my string';
+        str.split(/\s/); // return ["this", "is", "my", "string"]
+    </code></pre>
+    <p class="blogbody">
+        You're most likely already familiar with the split method. It accepts a single regular expression which represents where the "split" should occur. Please note that we can also use a string if we'd prefer. In the example above, by passing "\s" - representing a single space - we've now split our string into an array. Of course, If you need to access one particular value, just append the desired index - str.split(/\s/)[3].
+    </p>
+    <pre><code>
+        var username = 'J;ohnSmith;@%';
+        username = username.replace(/[^A-Za-z\d_-]+/, '');
+        username; // return JohnSmith;@%
+
+        var username = 'J;ohnSmith;@%';
+        username = username.replace(/[^A-Za-z\d_-]+/g, '');
+        username; // return JohnSmith
+    </code></pre>
+    <p class="blogbody">
+        This is another useful application of regular application. In the first code example, it is saying replacing any expressions in variable "username" are not letter, digit, underscore, and dash with ''. However, as the result shown, only the first unmatch expression is replaced. In order to replace all of them, you can add "g" at the end which means global search. By doing so, we can the result we actually want.
+    </p>
+    <p class="blogbody">
+        There are so much more other usages of regular expression. Mastering on it will make your programming life much easier.If you want to see more example, you can take a look at Jeffrey Way's <a href="http://code.tutsplus.com/tutorials/you-dont-know-anything-about-regular-expressions-a-complete-guide--net-7869">You Don't Know Anything About Regular Expressions: A Complete Guide</a>.
+    </p>
+  </section>
+  <footer>
+    <p>Updated by: Wei Wen</p>
+    <p>Updated in: September 17, 2015</p>
+    <p>Contact information: <a href="wwen1030@gmail.com">
+      wwen1030@gmail.com</a>.</p>
+    <a href="http://wenwei63029869.github.io" id = "navigation_bar">Home Page</a>
+    <a href="http://wenwei63029869.github.io/blog/blog.html" id = "blog_index_navigation_bar_1">Blog Index</a>
+  </footer>
+
+</main>
+
