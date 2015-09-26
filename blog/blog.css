@@ -22,7 +22,7 @@ img{
   position: absolute;
 }
 
-#example{
+.example{
   position: relative;
   display:block;
   float: left;

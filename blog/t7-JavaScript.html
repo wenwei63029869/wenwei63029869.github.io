@@ -1,48 +1,69 @@
-
 <!DOCTYPE html>
 
 <head>
   <title>Ruby Classes vs. JavaScript Constructor Functions</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="blog.css">
+  <link rel="stylesheet" type="text/css" href="../new_website/blog/new_blog_index.css">
 </head>
+<body>
 
-<main>
-  <section id="s0">
-    <img src="SmartConnect.png"/>
-    <h3 id="blog-title">Classes vs. Constructor Functions</h3>
-  </section>
-  <section id="blog">
-    <p class="blogbody">
-        After four weeks of learning Ruby, we start to learn Javascript this week. Surprisingly, Javascript and Ruby have a lot of similarity. Very often, there is a thing sharing the same functionality in both languages but with different names. However, it would be a big mistake to assume that everything is the same in both languages just with different names. Next, I am going to talk about one the most easiest to be confused terms - Ruby classes and Javascript constructor function.
-    </p>
-    <p class="blogbody">
-        Firstly, as you may already know, in Ruby a class is the blueprint from which individual objects are created. In other words, we can think of a class as a factory. The product -- objects get produced from a class and stored there. If you want to know more about Ruby classes, you can read my previous blog on this subject (<a href="http://wenwei63029869.github.io/blog/t5-ruby-classes.html">It Is All About Classes</a>). Below is an example of how to use class.
-    </p>
-    <pre><code>
-    class Cake
-      def initialize(size, flavor)  #=> Constructor function
-        @size = size  #=> Instance variable
-        @flavor = flavor
-      end
 
-      def size  #=> reader function
-        @size
-      end
 
-      def flavor  #=> reader function
-        @flavor
-      end
-    end
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+           <ul class="button-group">
+             <li><a href="#" class="button">Home page</a></li>
+             <li><a href="#" class="button">Projects</a></li>
+             <li><a href="#" class="button">Blogs</a></li>
+             <li><a href="#" class="button">About me</a></li>
+            </ul>
+          </div>
+      <h1>Blogs <small>Dev Bootcamp</small></h1>
+      <hr/>
+    </div>
+  </div>
 
-    cheese_cake = Cake.new(10, "cheese")  #=> A new class instance is created
-    cheese_cake.size  #=> return 10
-    cheese_cake.flavor  #=> return "cheese"
-    </code></pre>
-    <p class="blogbody">
-        Similarly, in Javascript, constructor function is a blue print to create objects. Therefore, the new object will inherit everything from its constructor function. In the example shown below, you will see how to set up a constructor function and create new objects from it.
-    </p>
-    <pre><code>
+
+  <div class="row">
+
+    <div class="large-9 columns" role="content">
+
+      <article>
+
+        <h2>Ruby Classes vs. JavaScript Constructor Functions</h2>
+        <h6>By <name>Wei Wen</name> September 11, 2015.</h6>
+
+        <p>
+            After four weeks of learning Ruby, we start to learn Javascript this week. Surprisingly, Javascript and Ruby have a lot of similarity. Very often, there is a thing sharing the same functionality in both languages but with different names. However, it would be a big mistake to assume that everything is the same in both languages just with different names. Next, I am going to talk about one the most easiest to be confused terms - Ruby classes and Javascript constructor function.
+        </p>
+        <p>
+            Firstly, as you may already know, in Ruby a class is the blueprint from which individual objects are created. In other words, we can think of a class as a factory. The product -- objects get produced from a class and stored there. If you want to know more about Ruby classes, you can read my previous blog on this subject (<a href="http://wenwei63029869.github.io/blog/t5-ruby-classes.html">It Is All About Classes</a>). Below is an example of how to use class.
+        </p>
+        <pre><code>
+        class Cake
+          def initialize(size, flavor)  #=> Constructor function
+            @size = size  #=> Instance variable
+            @flavor = flavor
+          end
+
+          def size  #=> reader function
+            @size
+          end
+
+          def flavor  #=> reader function
+            @flavor
+          end
+        end
+
+        cheese_cake = Cake.new(10, "cheese")  #=> Create a new class instance
+        cheese_cake.size  #=> return 10
+        cheese_cake.flavor  #=> return "cheese"
+        </code></pre>
+        <p>
+            Similarly, in Javascript, constructor function is a blue print to create objects. Therefore, the new object will inherit everything from its constructor function. In the example shown below, you will see how to set up a constructor function and create new objects from it.
+        </p>
+        <pre><code>
         function Goldbag(posX, posY) {
           this.posX = posX;
           this.posY = posY;
@@ -51,22 +72,63 @@
         var goldBag1 = new Goldbag(Math.random()*50 + 1, Math.random()*50 + 1)
         var goldBag2 = new Goldbag(Math.random()*50 + 1, Math.random()*50 + 1)
         var goldBag3 = new Goldbag(Math.random()*50 + 1, Math.random()*50 + 1)
-    </code></pre>
-    <p class="blogbody">
-         If you pay attention, you should see that the constructor function is very similar to initialize function in class which happens to be called constructor function as well. Therefore constructor functiion in Javascript only does part of what a class does in Ruby. If you ever want to add function to all the same type of objects (like instance method in Ruby), you will need to prototype. Here is an article about prototype in Javascript: <a href="https://github.com/raganwald/javascript-allonge/blob/master/manuscript/markdown/Ideas/prototype.md">How Prototypes and Constructors differ from Classes</a>. Another difference is that a class is actually an instance of another class while a constructor function is not. Therefore, a class will have methods inherited from its super class, while constructor function doesn't have any super class to inherit methods from.
-    </p>
-    <p class="blogbody">
-          Even though different programming languages have a lot in common in terms of logic, it would be better not to simply think that they are just different syntactically by overlooking the fundamental differences.
-    </p>
-  </section>
-  <footer>
-    <p>Updated by: Wei Wen</p>
-    <p>Updated in: September ,10 2015</p>
-    <p>Contact information: <a href="wwen1030@gmail.com">
-      wwen1030@gmail.com</a>.</p>
-    <a href="http://wenwei63029869.github.io" id = "navigation_bar">Home Page</a>
-    <a href="http://wenwei63029869.github.io/blog/blog.html" id = "blog_index_navigation_bar_1">Blog Index</a>
+        </code></pre>
+        <p>
+             If you pay attention, you should see that the constructor function is very similar to initialize function in class which happens to be called constructor function as well. Therefore constructor functiion in Javascript only does part of what a class does in Ruby. If you ever want to add function to all the same type of objects (like instance method in Ruby), you will need to prototype. Here is an article about prototype in Javascript: <a href="https://github.com/raganwald/javascript-allonge/blob/master/manuscript/markdown/Ideas/prototype.md">How Prototypes and Constructors differ from Classes</a>. Another difference is that a class is actually an instance of another class while a constructor function is not. Therefore, a class will have methods inherited from its super class, while constructor function doesn't have any super class to inherit methods from.
+        </p>
+        <p>
+              Even though different programming languages have a lot in common in terms of logic, it would be better not to simply think that they are just different syntactically by overlooking the fundamental differences.
+        </p>
+
+
+      </article>
+
+    </div>
+
+
+
+    <aside class="large-3 columns">
+
+      <h5>Newest Blogs</h5>
+      <ul class="side-nav">
+        <li><a href="http://wenwei63029869.github.io/blog/c9-questions.html">Asking Good Questions</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t8-tech.html">Regular Expression</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/c8-conflict.html">Conflict Solving</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t7-JavaScript.html">Classes vs. Constructor Functions</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/c7-values.html">Find Your Values</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t6-oop-concepts.html">Classes vs Modules</a></li>
+      </ul>
+
+      <div class="panel">
+        <h5>Recomended Blogs</h5>
+        <p>Coming soon...</p>
+        <a href="#">Read More →</a>
+      </div>
+
+    </aside>
+
+
+  </div>
+
+
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright no one at all. Updated in: September 24, 2015</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="wwen1030@gmail.com">Email</a></li>
+            <li><a href="https://twitter.com/wenwei63029869">Twitter</a></li>
+            <li><a href="https://github.com/wenwei63029869">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/wwen1030">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
 
-</main>
-
+</body>

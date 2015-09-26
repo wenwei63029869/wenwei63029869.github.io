@@ -1,65 +1,127 @@
-
 <!DOCTYPE html>
 
 <head>
   <title>Array and Hash</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="blog.css">
+  <link rel="stylesheet" type="text/css" href="../new_website/blog/new_blog_index.css">
 </head>
+<body>
 
-<main>
-  <section id="s0">
-    <img src="SmartConnect.png"/>
-    <h3 id="blog-title">Array and Hash</h3>
-  </section>
-  <section id="blog">
-    <p class="blogbody">
-        Ruby's arrays and hashes are indexed collections. Both store collections of objects, accessible using a key. With arrays, the key is an integer, while any objects can be keys for Hashes. Both arrays and hashes grow as needed to hold new elements. It's more efficient to access array elements, but hashes provide more flexibility. Any particular array or hash can hold objects of differing types; they can contain an integer, a string, and a floating-point number.
-    </p>
-    <pre><code>
-    a = [3, 'dog', 3,57, [1,2,3]]
-    #access the first element
-    a[0]
-    #set the fifth elelment
-    a[4] = nil
-    #dump out the array
-    a
-    =>[3, 'dog', 3,57, [1,2,3], nil]
-    </code></pre>
-    <p class="blogbody">
-        <span>Array</span>. Array is a list of objects bounded by a pair of square brackets. Users can access any objects in the array easily through index number, which starts from 0 instead of 1.
-    </p>
-    <pre><code>
-    a = [3, 'dog', 3,57, [1,2,3]]
-    a[0]
-    => 3
-    a[3]
-    => [1,2,3]
-    </code></pre>
-    <p class="blogbody">
-        <span>Hash</span>. Hash is similarly to Array, but there is couple of small differences. First, hashes use a pair of braces. Secondly, while building a hash, two objects have to be supplied for every entry: one for the key, one for the value. Users access values through keys.
-    </p>
-    <pre><code>
-    instSection = {
-    'cello' => 'string',
-    'clarinet' => 'woodwind',
-    'drum'=> "percussion"
-    }
-    instSection['cello']
-    => 'string'
-    </code></pre>
-    <p class="blogbody">
-        Even though these two are very similar, hashes are usually more flexible normally. We can imagine that when we set up a database for user information, hash would be a very handy tool since we can access user information based on they names.
-    </p>
-  </section>
-  <footer>
-    <p>Updated by: Wei Wen</p>
-    <p>Updated in: August ,15 2015</p>
-    <p>Contact information: <a href="wwen1030@gmail.com">
-      wwen1030@gmail.com</a>.</p>
-    <a href="http://wenwei63029869.github.io" id = "navigation_bar">Home Page</a>
-    <a href="http://wenwei63029869.github.io/blog/blog.html" id = "blog_index_navigation_bar_1">Blog Index</a>
+
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+           <ul class="button-group">
+             <li><a href="#" class="button">Home page</a></li>
+             <li><a href="#" class="button">Projects</a></li>
+             <li><a href="#" class="button">Blogs</a></li>
+             <li><a href="#" class="button">About me</a></li>
+            </ul>
+          </div>
+      <h1>Blogs <small>Dev Bootcamp</small></h1>
+      <hr/>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="large-9 columns" role="content">
+
+      <article>
+
+        <h2>Array and Hash</h2>
+        <h6>By <name>Wei Wen</name> August 18, 2015.</h6>
+
+        <p>
+            Ruby's arrays and hashes are indexed collections. Both store collections of objects, accessible using a key. With arrays, the key is an integer, while any objects can be keys for Hashes. Both arrays and hashes grow as needed to hold new elements. It's more efficient to access array elements, but hashes provide more flexibility. Any particular array or hash can hold objects of differing types; they can contain an integer, a string, and a floating-point number.
+        </p>
+        <pre><code>
+            a = [3, 'dog', 3,57, [1,2,3]]
+            #access the first element
+            a[0]
+            #set the fifth elelment
+            a[4] = nil
+            #dump out the array
+            a
+            =>[3, 'dog', 3,57, [1,2,3], nil]
+        </code></pre>
+        <p>
+            <span>Array</span>. Array is a list of objects bounded by a pair of square brackets. Users can access any objects in the array easily through index number, which starts from 0 instead of 1.
+        </p>
+        <pre><code>
+            a = [3, 'dog', 3,57, [1,2,3]]
+            a[0]
+            => 3
+            a[3]
+            => [1,2,3]
+        </code></pre>
+        <p>
+            <span>Hash</span>. Hash is similarly to Array, but there is couple of small differences. First, hashes use a pair of braces. Secondly, while building a hash, two objects have to be supplied for every entry: one for the key, one for the value. Users access values through keys.
+        </p>
+        <pre><code>
+            instSection = {
+            'cello' => 'string',
+            'clarinet' => 'woodwind',
+            'drum'=> "percussion"
+            }
+            instSection['cello']
+            => 'string'
+        </code></pre>
+        <p>
+            Even though these two are very similar, hashes are usually more flexible normally. We can imagine that when we set up a database for user information, hash would be a very handy tool since we can access user information based on they names.
+        </p>
+
+
+      </article>
+
+    </div>
+
+
+
+    <aside class="large-3 columns">
+
+      <h5>Newest Blogs</h5>
+      <ul class="side-nav">
+        <li><a href="http://wenwei63029869.github.io/blog/c9-questions.html">Asking Good Questions</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t8-tech.html">Regular Expression</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/c8-conflict.html">Conflict Solving</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t7-JavaScript.html">Classes vs. Constructor Functions</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/c7-values.html">Find Your Values</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t6-oop-concepts.html">Classes vs Modules</a></li>
+      </ul>
+
+      <div class="panel">
+        <h5>Recomended Blogs</h5>
+        <p>Coming soon...</p>
+        <a href="#">Read More →</a>
+      </div>
+
+    </aside>
+
+
+  </div>
+
+
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright no one at all. Updated in: September 24, 2015</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="wwen1030@gmail.com">Email</a></li>
+            <li><a href="https://twitter.com/wenwei63029869">Twitter</a></li>
+            <li><a href="https://github.com/wenwei63029869">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/wwen1030">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
 
-</main>
-
+</body>
