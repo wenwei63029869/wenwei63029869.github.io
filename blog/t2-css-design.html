@@ -1,44 +1,107 @@
-
 <!DOCTYPE html>
 
 <head>
   <title>Absolute, Relative, Fixed Positioning</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="blog.css">
+  <link rel="stylesheet" type="text/css" href="../new_website/blog/new_blog_index.css">
 </head>
+<body>
 
-<main>
-  <section id="s0">
-    <img src="SmartConnect.png"/>
-    <h3 id="blog-title">Absolute, Relative, Fixed Positioning</h3>
-  </section>
-  <section id="blog">
-    <p class="blogbody">
-        Positioning is one of the most basic yet important concepts in CSS language. New learners often get confused by different positioning propeties: static, relative, absolute, and fixed. It is perfectly normal. What we need to know is positioning is not as hard as it seems to be. Next, I will explain what each positioning property means.
-    </p>
-    <p class="blogbody">
-        <span>Static</span>. This is default position for every element. When you create a div(section), the default postion is the static position. Normally, no one will use static positioning because the position cannot be manipulated. Instead, people will set positioning to relative, absolute, or fixed.
-    </p>
-    <p class="blogbody">
-        <span>Relative</span>. This type positioning positions the element relative to itself. It is the most confusing and misused positioning for new learners. However, it is very straightforward once you understand how it works. When you set an element relative positioning without setting top, bottom, left, and right, it will stay on the default position. Once you change the attributes such as top: 10px, the element will shift down by 10px from its original position.
-    </p>
-    <p class="blogbody">
-        <span>Absolute</span>. This type positioning is one of the most powerful tools that allows you position any element anywhere accurately. It positions the elements according to the positions of its next parent elements with relative(absolute) positioning. If there is no such parent, the element will be placed relatively to the whole page itself.  What we need to pay attention is that once we set absoulte positioning, it will not be affected by other elements and will not affect other elements. Therefore, it could be hard to control as more and more elements added to the page if we overuse absolute positioning.
-    </p>
-    <p class="blogbody">
-        <span>Fixed</span>. This type positioning hold an elecment static relatively to viewport or the browser window itself. If you use fixed positioning to an element placed on the left corner of viewport, its position will be consistent regardless of scroliing up or down. Fixed positioning was used more often in the past, but it is rarely used in modern website design.
-    </p>
-    <p class="blogbody">
-        I hope this article can help new learners better understand positioning concept and the importance of it.
-    </p>
-  </section>
-  <footer>
-    <p>Updated by: Wei Wen</p>
-    <p>Updated in: August ,9 2015</p>
-    <p>Contact information: <a href="wwen1030@gmail.com">
-      wwen1030@gmail.com</a>.</p>
-    <a href="http://wenwei63029869.github.io" id = "navigation_bar">Home Page</a>
-    <a href="http://wenwei63029869.github.io/blog/blog.html" id = "blog_index_navigation_bar_1">Blog Index</a>
+
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+           <ul class="button-group">
+             <li><a href="#" class="button">Home page</a></li>
+             <li><a href="#" class="button">Projects</a></li>
+             <li><a href="#" class="button">Blogs</a></li>
+             <li><a href="#" class="button">About me</a></li>
+            </ul>
+          </div>
+      <h1>Blogs <small>Dev Bootcamp</small></h1>
+      <hr/>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="large-9 columns" role="content">
+
+      <article>
+
+        <h2>Absolute, Relative, Fixed Positioning</h2>
+        <h6>By <name>Wei Wen</name> August 11, 2015.</h6>
+
+        <p>
+            Positioning is one of the most basic yet important concepts in CSS language. New learners often get confused by different positioning propeties: static, relative, absolute, and fixed. It is perfectly normal. What we need to know is positioning is not as hard as it seems to be. Next, I will explain what each positioning property means.
+        </p>
+        <p>
+            <span>Static</span>. This is default position for every element. When you create a div(section), the default postion is the static position. Normally, no one will use static positioning because the position cannot be manipulated. Instead, people will set positioning to relative, absolute, or fixed.
+        </p>
+        <p>
+            <span>Relative</span>. This type positioning positions the element relative to itself. It is the most confusing and misused positioning for new learners. However, it is very straightforward once you understand how it works. When you set an element relative positioning without setting top, bottom, left, and right, it will stay on the default position. Once you change the attributes such as top: 10px, the element will shift down by 10px from its original position.
+        </p>
+        <p>
+            <span>Absolute</span>. This type positioning is one of the most powerful tools that allows you position any element anywhere accurately. It positions the elements according to the positions of its next parent elements with relative(absolute) positioning. If there is no such parent, the element will be placed relatively to the whole page itself.  What we need to pay attention is that once we set absoulte positioning, it will not be affected by other elements and will not affect other elements. Therefore, it could be hard to control as more and more elements added to the page if we overuse absolute positioning.
+        </p>
+        <p>
+            <span>Fixed</span>. This type positioning hold an elecment static relatively to viewport or the browser window itself. If you use fixed positioning to an element placed on the left corner of viewport, its position will be consistent regardless of scroliing up or down. Fixed positioning was used more often in the past, but it is rarely used in modern website design.
+        </p>
+        <p>
+            I hope this article can help new learners better understand positioning concept and the importance of it.
+        </p>
+
+
+      </article>
+
+    </div>
+
+
+
+    <aside class="large-3 columns">
+
+      <h5>Newest Blogs</h5>
+      <ul class="side-nav">
+        <li><a href="http://wenwei63029869.github.io/blog/c9-questions.html">Asking Good Questions</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t8-tech.html">Regular Expression</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/c8-conflict.html">Conflict Solving</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t7-JavaScript.html">Classes vs. Constructor Functions</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/c7-values.html">Find Your Values</a></li>
+        <li><a href="http://wenwei63029869.github.io/blog/t6-oop-concepts.html">Classes vs Modules</a></li>
+      </ul>
+
+      <div class="panel">
+        <h5>Recomended Blogs</h5>
+        <p>Coming soon...</p>
+        <a href="#">Read More →</a>
+      </div>
+
+    </aside>
+
+
+  </div>
+
+
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright no one at all. Updated in: September 24, 2015</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="wwen1030@gmail.com">Email</a></li>
+            <li><a href="https://twitter.com/wenwei63029869">Twitter</a></li>
+            <li><a href="https://github.com/wenwei63029869">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/wwen1030">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
 
-</main>
+</body>
