@@ -1,2 +1,2 @@
 # wenwei63029869.github.io
-My DBC phase 0 github pages site!
+This is my personal website. Check it out on: [Wei to Go!](wenwei63029869.github.io)
